@@ -1,0 +1,229 @@
+:root {
+  --primary-light: #f5f0e8;
+  --secondary-light: #e8dcc8;
+  --accent: #d4a574;
+  --text-dark: #4a4a4a;
+  --text-light: #7a7a7a;
+  --rose-light: #fce4ec;
+  --rose-accent: #f48fb1;
+}
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--rose-light) 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px 40px;
+  background: linear-gradient(180deg, #fff9f0 0%, var(--primary-light) 100%);
+  border-bottom: 2px solid var(--secondary-light);
+}
+
+.title {
+  font-size: 3.5rem;
+  color: var(--accent);
+  margin: 0 0 10px 0;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  color: var(--text-dark);
+  margin: 0 0 20px 0;
+  font-weight: 300;
+}
+
+.decorLine {
+  width: 80px;
+  height: 3px;
+  background: var(--accent);
+  margin: 20px auto 0;
+  border-radius: 2px;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.infoCard {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid var(--accent);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.infoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.infoCard h2 {
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  margin: 0 0 15px 0;
+}
+
+.highlight {
+  font-size: 1.6rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.infoCard p {
+  color: var(--text-light);
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.rsvpSection {
+  padding: 60px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.rsvpTitle {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.rsvpTitle::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+.form {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.formGroup {
+  margin-bottom: 25px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+.formGroup input,
+.formGroup select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid var(--secondary-light);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--rose-accent) 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 10px;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(212, 165, 116, 0.3);
+}
+
+.submitBtn:active {
+  transform: translateY(0);
+}
+
+.successMessage {
+  background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+  border: 2px solid #81c784;
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+  color: #2e7d32;
+  font-size: 1.1rem;
+  font-weight: 600;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-light);
+  font-size: 1.1rem;
+  border-top: 2px solid var(--secondary-light);
+  background: white;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+  }
+
+  .info {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px 20px;
+  }
+
+  .form {
+    padding: 25px;
+  }
+
+  .rsvpTitle {
+    font-size: 1.5rem;
+  }
+}
